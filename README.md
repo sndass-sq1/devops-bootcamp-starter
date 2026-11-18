@@ -16,12 +16,22 @@ One small website that the trainees ship (Day 1), containerise (Day 2) and secur
 | `test/greet.test.js` | Day 1 | Two unit tests, run with `node --test` |
 | `maze/make-maze.sh` | Day 1 | Linux treasure hunt. In Git Bash: `chmod +x maze/make-maze.sh` then `./maze/make-maze.sh`, then `cd maze/island` |
 | `day1/ci.yml` | Day 1 | Pipeline: test, build, deploy to GitHub Pages. Copy to `.github/workflows/ci.yml` |
+| `day1/terraform/` | Day 1 | Trainer-only Terraform demo (no cloud account needed). Steps in `day1/terraform/DEMO.md` |
 | `day2/Dockerfile` | Day 2 | Copy to the repo root, then `docker build -t hello-devops:1.0 .` |
 | `day2/k8s.yaml` | Day 2 | Deployment (2 pods) and NodePort Service on `localhost:30080` |
 | `day3/bad-commit/` | Day 3 | Deliberately insecure files, copied over the project at the start of the lab |
 | `day3/security.yml` | Day 3 | Six security gates. Copy to `.github/workflows/security.yml` |
 | `day3/semgrep-rules.yml`, `day3/zap-rules.tsv` | Day 3 | Rules used by the SAST and DAST gates |
 | `day3/fixes/` | Day 3 | A ready-made fix for every gate |
+
+## Day 3 hints for trainees
+
+When a gate fails, it also runs a **Hints** step. Trainees see:
+
+1. A red **annotation** at the top of the run page that names the file (and line) to open.
+2. A **Hints** card in the job's **Summary** with three levels, each one hidden until clicked: *where to look*, *why it is a problem*, *how to fix it*.
+
+Tell trainees: read the log first, then open Hint 1, and open the next hint only if they are still stuck.
 
 ## Day 3 answer key
 
